@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!-- Material Design Lite  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <script src="js/material.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+        <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+            <div class="mdl-layout__header-row"> 
+              <!-- titulo -->
+               <span class="mdl-layout-title">Comprar Producto</span>
+                <div class="mdl-layout-spacer"></div>
+                <!-- Buscador -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search"> <i class="material-icons">search</i> </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search">
+                        <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                    </div>
+                </div>
+                <!-- Menu de opciones: https://www.tutorialspoint.com/materialdesignlite/materialdesignlite_menus.htm -->
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn"> <i class="material-icons">more_vert</i> </button>
+                <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                    <li class="mdl-menu__item"><a href="">Mis datos</a></li>
+                    <li class="mdl-menu__item"><a href="">Configuración</a></li>
+                    <li class="mdl-menu__item"><a href="">Salir</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+            <header class="demo-drawer-header"> 
+                <img src="img/perfil-facebook.jpg" class="demo-avatar">
+                <div class="demo-avatar-dropdown"> 
+                    <span>Usuario</span>
+                </div>
+            </header>
+            <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800"> 
+               <!-- Material Icons: https://material.io/icons/ -->
+                <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a> 
+                <div class="mdl-layout-spacer"></div> 
+                <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Ayuda<span class="visuallyhidden">Help</span></a> 
+            </nav>
+        </div>
+        <main class="mdl-layout__content mdl-color--grey-100">
+
+                   <div class="row">
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/huawei.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 259</h4>
+                                <h4><a href="prod1.html">Huawei</a>
+                                </h4>
+                                <p>Smartphone Y360 Negro</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/leutec.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 349</h4>
+                                <h4><a href="prod2.html">Leotec</a>
+                                </h4>
+                                <p>Smartphone Platinium P50 Azul</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/huawei2.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 419</h4>
+                                <h4><a href="prod3.html">Huawei</a>
+                                </h4>
+                                <p>Smartphone Y5 II 3G Dual SIM Negro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/sansumg.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 649</h4>
+                                <h4><a href="prod4.html">Samsumg</a>
+                                </h4>
+                                <p>Smartphone J3 5" 4G Dual SIM Blanco</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/lg.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 1,199</h4>
+                                <h4><a href="prod5.html">LG</a>
+                                </h4>
+                                <p>Smartphone G3 Stylus 5,5" Dorado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/lenovo.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">S/. 749</h4>
+                                <h4><a href="prod6.html">Lenovo</a>
+                                </h4>
+                                <p>Phablet 6.9" Quad Core 16 GB 4G Dual SIM Negro</p>
+                            </div>
+                         </div>
+                    </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
