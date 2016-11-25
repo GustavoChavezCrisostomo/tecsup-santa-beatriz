@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Santa Beatriz</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .extra-margins {
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .jumbotron {
+            text-align: center;
+        }
+    </style>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+</head>
+
+<body>
+
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-dark primary-color-dark">
+
+            <!-- Collapse button-->
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="container">
+
+                <!--Collapse content-->
+                <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                    <!--Navbar Brand-->
+                    <a class="navbar-brand" href="../index.html" target="_blank">MDSB</a>
+                    <!--Links-->
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="indexmd.html">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.html">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pedidos.html">Pedidos</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="guiasremision.html">Guías de Remisión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="facturas.html">Facturas</a>
+                        </li>
+                    </ul>
+                    <!--Search form-->
+                    <form class="form-inline">
+                        <input class="form-control" type="text" placeholder="Buscar por código...">
+                    </form>
+        </div>
+                <!--/.Collapse content-->
+
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+    </header>
+
+    <main>
+
+        <!--Main layout-->
+        <div class="container">
+            <!--First row-->
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <!--/.First row-->
+
+            <hr class="extra-margins">
+
+            <!--Second row-->
+            <div class="row">
+                <!--First columnn-->
+                <div class="col-md-22">
+                    <!--Card-->
+                    <div class="card">
+
+                    <!-- Contenido -->
+
+<div id="accordion">
+  <h3>Guía de Remision Nº00001 - Código de pedido: 0123456789</h3>
+  <div>
+
+       <form class="form1" action="" method="post">
+
+                <div class="header">Guía de remisión</div>
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label>Punto de partida:</label>
+                        <input type="text" name="punto" maxlength="10" placeholder="Ingrese su punto de partida" autofocus/>
+
+
+                        <label>Punto de llegada: </label>
+                        <input type="text" name="puntollegada" maxlength="10" placeholder="Ingrese punto de llegada" autofocus/>
+                    </p>
+
+                    <p>
+                        <label>Conductor:</label>
+                        <input type="text" name="conductor" maxlength="300" placeholder="Ingrese el nombre completo del conductor" value=""/>
+                    </p>
+
+                     <p>
+                        <label>Fecha de traslado:</label>
+                        <input type="date" name="ftraslado"/>
+                    </p>
+
+                    <p>
+                        <label>Motivo del traslado:
+                            <input type="radio" name="motivo" value="1"/>
+                            Venta
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="2"/>
+                            Consignación
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="3"/>
+                            Devolución
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="4"/>
+                            Traslado entre almacenes
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="5"/>
+                            Otros
+                        </label>
+
+                        <label>Especificar otro: </label>
+                        <input type="text" name="especificar" maxlength="300" placeholder="Otro" value=""/>
+                    </p>
+
+
+
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Datos de los productos</legend>
+
+
+
+                   <table class="table-productos">
+
+                <cols>
+                    <col width="100"/>
+                    <col/>
+                    <col width="120"/>
+                    <col width="40"/>
+                </cols>
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                   <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+                    <p>
+                        <label>Destinario:</label>
+                        <input type="text" name="dest" placeholder="Cliente" value=""/>
+                    </p>
+
+                    <p>
+                        <label>Ruc:</label>
+                        <input type="text" name="ruc" placeholder="En caso tenga" value=""/>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="acuerdos" value="Si"/>
+                            Recibió conforme su pedido.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Registrar"/>
+                    <input type="reset" value="Limpiar"/>
+                </p>
+
+            </form>
+
+            <br/>
+
+            <br/>
+
+  </div>
+  <h3>Guía de Remision Nº00002 - Código de pedido: 0123456788</h3>
+  <div>
+     <form class="form1" action="" method="post">
+
+                <div class="header">Guía de remisión</div>
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label>Punto de partida:</label>
+                        <input type="text" name="punto" maxlength="10" placeholder="Ingrese su punto de partida" autofocus/>
+
+
+                        <label>Punto de llegada: </label>
+                        <input type="text" name="puntollegada" maxlength="10" placeholder="Ingrese punto de llegada" autofocus/>
+                    </p>
+
+                    <p>
+                        <label>Conductor:</label>
+                        <input type="text" name="conductor" maxlength="300" placeholder="Ingrese el nombre completo del conductor" value=""/>
+                    </p>
+
+                     <p>
+                        <label>Fecha de traslado:</label>
+                        <input type="date" name="ftraslado"/>
+                    </p>
+
+                    <p>
+                        <label>Motivo del traslado:
+                            <input type="radio" name="motivo" value="1"/>
+                            Venta
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="2"/>
+                            Consignación
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="3"/>
+                            Devolución
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="4"/>
+                            Traslado entre almacenes
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="5"/>
+                            Otros
+                        </label>
+
+                        <label>Especificar otro: </label>
+                        <input type="text" name="especificar" maxlength="300" placeholder="Otro" value=""/>
+                    </p>
+
+
+
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Datos de los productos</legend>
+
+
+
+                   <table class="table-productos">
+
+                <cols>
+                    <col width="100"/>
+                    <col/>
+                    <col width="120"/>
+                    <col width="40"/>
+                </cols>
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                   <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+                    <p>
+                        <label>Destinario:</label>
+                        <input type="text" name="dest" placeholder="Cliente" value=""/>
+                    </p>
+
+                    <p>
+                        <label>Ruc:</label>
+                        <input type="text" name="ruc" placeholder="En caso tenga" value=""/>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="acuerdos" value="Si"/>
+                            Recibió conforme su pedido.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Registrar"/>
+                    <input type="reset" value="Limpiar"/>
+                </p>
+
+            </form>
+
+            <br/>
+
+            <br/>
+  </div>
+  <h3>Guía de Remision Nº00001 - Código de pedido: 0123456787</h3>
+  <div>
+     <form class="form1" action="" method="post">
+
+                <div class="header">Guía de remisión</div>
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label>Punto de partida:</label>
+                        <input type="text" name="punto" maxlength="10" placeholder="Ingrese su punto de partida" autofocus/>
+
+
+                        <label>Punto de llegada: </label>
+                        <input type="text" name="puntollegada" maxlength="10" placeholder="Ingrese punto de llegada" autofocus/>
+                    </p>
+
+                    <p>
+                        <label>Conductor:</label>
+                        <input type="text" name="conductor" maxlength="300" placeholder="Ingrese el nombre completo del conductor" value=""/>
+                    </p>
+
+                     <p>
+                        <label>Fecha de traslado:</label>
+                        <input type="date" name="ftraslado"/>
+                    </p>
+
+                    <p>
+                        <label>Motivo del traslado:
+                            <input type="radio" name="motivo" value="1"/>
+                            Venta
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="2"/>
+                            Consignación
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="3"/>
+                            Devolución
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="4"/>
+                            Traslado entre almacenes
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="5"/>
+                            Otros
+                        </label>
+
+                        <label>Especificar otro: </label>
+                        <input type="text" name="especificar" maxlength="300" placeholder="Otro" value=""/>
+                    </p>
+
+
+
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Datos de los productos</legend>
+
+
+
+                   <table class="table-productos">
+
+                <cols>
+                    <col width="100"/>
+                    <col/>
+                    <col width="120"/>
+                    <col width="40"/>
+                </cols>
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                   <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+                    <p>
+                        <label>Destinario:</label>
+                        <input type="text" name="dest" placeholder="Cliente" value=""/>
+                    </p>
+
+                    <p>
+                        <label>Ruc:</label>
+                        <input type="text" name="ruc" placeholder="En caso tenga" value=""/>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="acuerdos" value="Si"/>
+                            Recibió conforme su pedido.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Registrar"/>
+                    <input type="reset" value="Limpiar"/>
+                </p>
+
+            </form>
+
+            <br/>
+
+            <br/>
+  </div>
+  <h3>Guía de Remision Nº00004 - Código de pedido: 0123456786</h3>
+  <div>
+     <form class="form1" action="" method="post">
+
+                <div class="header">Guía de remisión</div>
+
+                <fieldset>
+
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label>Punto de partida:</label>
+                        <input type="text" name="punto" maxlength="10" placeholder="Ingrese su punto de partida" autofocus/>
+
+
+                        <label>Punto de llegada: </label>
+                        <input type="text" name="puntollegada" maxlength="10" placeholder="Ingrese punto de llegada" autofocus/>
+                    </p>
+
+                    <p>
+                        <label>Conductor:</label>
+                        <input type="text" name="conductor" maxlength="300" placeholder="Ingrese el nombre completo del conductor" value=""/>
+                    </p>
+
+                     <p>
+                        <label>Fecha de traslado:</label>
+                        <input type="date" name="ftraslado"/>
+                    </p>
+
+                    <p>
+                        <label>Motivo del traslado:
+                            <input type="radio" name="motivo" value="1"/>
+                            Venta
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="2"/>
+                            Consignación
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="3"/>
+                            Devolución
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="4"/>
+                            Traslado entre almacenes
+                        </label>
+                         <label>
+                            <input type="radio" name="motivo" value="5"/>
+                            Otros
+                        </label>
+
+                        <label>Especificar otro: </label>
+                        <input type="text" name="especificar" maxlength="300" placeholder="Otro" value=""/>
+                    </p>
+
+
+
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Datos de los productos</legend>
+
+
+
+                   <table class="table-productos">
+
+                <cols>
+                    <col width="100"/>
+                    <col/>
+                    <col width="120"/>
+                    <col width="40"/>
+                </cols>
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                   <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                        <td><input value=""></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+                    <p>
+                        <label>Destinario:</label>
+                        <input type="text" name="dest" placeholder="Cliente" value=""/>
+                    </p>
+
+                    <p>
+                        <label>Ruc:</label>
+                        <input type="text" name="ruc" placeholder="En caso tenga" value=""/>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="acuerdos" value="Si"/>
+                            Recibió conforme su pedido.
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Registrar"/>
+                    <input type="reset" value="Limpiar"/>
+                </p>
+
+            </form>
+
+            <br/>
+
+            <br/>
+  </div>
+</div>
+                     </div>
+                    <!--/.Card-->
+                </div>
+                <!--Third columnn-->
+            </div>
+            <!--/.Second row-->
+        </div>
+        <!--/.Main layout-->
+
+    </main>
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only primary-color-dark">
+
+
+        <!--Call to action-->
+        <div class="call-to-action">
+
+            <ul>
+                <li>
+              <li><a target="_blank" href="#" class="btn btn-default">SALIR</a></li>
+            </ul>
+        </div>
+        <!--/.Call to action-->
+
+    </footer>
+    <!--/.Footer-->
+
+</body>
+</html>
