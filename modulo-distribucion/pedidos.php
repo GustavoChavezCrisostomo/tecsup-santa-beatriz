@@ -237,6 +237,15 @@
 
         <div class="container">
             <!--First row-->
+            
+            <?php 
+            
+            
+            require 'tryfunc.php';
+            
+            $pedidos=listarPedidos();
+            $contador=0;
+            ?>
             <div class="col-md-12">
                 <div class="card">
                   <div class="card-block">
@@ -246,8 +255,8 @@
                         <table id="sourcetable" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp col-md-12">
                             <thead>
                                 <tr>
-                                    <th>Checker</th>
-                                          <th>ID Pedido</th>
+                                        <th>Checker</th>
+                                        <th>ID Pedido</th>
                                         <th>Fecha pedido</th>
                                         <th>    ID Producto  </th>
                                         <th class="mdl-data-table__cell--non-numeric">Producto</th>
@@ -259,40 +268,43 @@
                                     </tr>
                             </thead>
                             <tbody>
-                                <tr id="sour0">
+                                
+                                <?php foreach($pedidos as $i=> $pedido){?>
+                                
+                                
+                                <tr id="sour<?= $i ?>">
+                                    
                                     <td><input type="checkbox" /> </td>
-                                    <td>1</td>
+                                    <td><?php echo $pedido->idpedido ?></td>
                                     <td>
-                                      15-12-12
-                                    </td><td>
-                                      456
+                                        <?php echo $pedido->fechapedido ?>
                                     </td>
-                                    <td class="mdl-data-table__cell--non-numeric">Mouse</td>
-                                    <td class="mdl-data-table__cell--non-numeric">Juan Perez</td>
-                                    <td>25</td>
-                                    <td class="mdl-data-table__cell--non-numeric">Premium</td>
-                                      <td class="mdl-data-table__cell--non-numeric">Los Albaricoques 264</td>
                                     <td>
-                                      20.00
+                                      <?php  echo $pedido->idproducto ?>
+                                    </td>
+                                    <td>
+                                     <?php echo $pedido->producto ?>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <?php echo $pedido->cliente?>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <?php echo $pedido->cantidad ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $pedido->modoenvio ?>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <?php echo $pedido->direccion ?>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <?php echo $pedido->precio ?>
                                     </td>
                                 </tr>
-                                <tr id="sour1">
-                                    <td><input type="checkbox" /> </td>
-                                    <td>1</td>
-                                    <td>
-                                      14-12-11
-                                    </td><td>
-                                      456
-                                    </td>
-                                    <td class="mdl-data-table__cell--non-numeric">Mouse</td>
-                                    <td class="mdl-data-table__cell--non-numeric">Juan Perez</td>
-                                    <td>25</td>
-                                    <td class="mdl-data-table__cell--non-numeric">Premium</td>
-                                    <td class="mdl-data-table__cell--non-numeric">Los Albaricoques 264</td>
-                                    <td>
-                                      20.00
-                                    </td>
-                                </tr>
+                              <?php 
+                              $contador++;
+                              } ?>
+                             
                             </tbody>
                         </table>
 </div>
