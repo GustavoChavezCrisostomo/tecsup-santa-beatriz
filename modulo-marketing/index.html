@@ -22,9 +22,28 @@
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
-                <nav class="mdl-navigation"> <a class="mdl-navigation__link dialog-button">Publicaciones Recientes</a> <a class="mdl-navigation__link" href="">Añadir Nuevo</a> </nav>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link dialog-button">Publicaciones Recientes</a> 
+                </nav>
             </div>
-        </header>
+        </header> 
+        <div align="center"> 
+            <form action="añadir.php" method=post enctype="multipart/form-data">
+                Ingrese aqui su archivo:<br>
+                <input type="file" name="archivo">
+                <input type="submit" value="Añadir" id="anadir">
+            </form>
+                
+            <table border="1" class="tabla">
+                <tr>
+                    <th style = "width: 500px;">Archivos</th>
+                    <th>Estado</th>
+                    <th class="calificacion"></th>
+                    <th class="calificacion">Calificacion</th>
+                    <th class="calificacion"></th>
+                </tr>
+            </table>
+        </div>
         <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
             <header class="demo-drawer-header"> <img src="img/alfredo.jpg" class="demo-avatar">
                 <div class="demo-avatar-dropdown"> <span>hello@example.com</span>
@@ -81,7 +100,10 @@
                 <button type="button" class="mdl-button" disabled>Disabled action</button>
             </div>
         </dialog>
+        
+   
     </div>
+ 
     <script>
         (function () {
             'use strict';
