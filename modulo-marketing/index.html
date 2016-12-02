@@ -6,11 +6,25 @@
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.form.min.js"></script>
     <script type="text/javascript" src="js/material.min.js"></script>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Material Design Lite  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> </head>
+
+    <script>
+        $(function(){
+            
+            $('#archivo-form').ajaxForm(function(){
+                
+                alert('Archivo cargado satisfactoriamente');
+                
+            });
+            
+        });
+    </script>
 
 <body>
     <!-- Uses a header that scrolls with the text, rather than staying
@@ -222,11 +236,11 @@
             <h3 class="mdl-dialog__title">Agregar Nuevo Archivo</h3>
             <div class="mdl-dialog__content">
               <div align="center"> 
-                <form action="añadir.php" method=post enctype="multipart/form-data">
-                Ingrese aqui su archivo:<br>
-                <input type="file" name="archivo">
-                <input type="submit" value="Añadir" id="anadir">
-            </form>
+                <form id="archivo-form" action="añadir.php" method=post enctype="multipart/form-data">
+                    Ingrese aqui su archivo:<br>
+                    <input type="file" name="archivo">
+                    <input type="submit" value="Añadir" id="anadir">
+                </form>
                 
                 </div>
             </div>
