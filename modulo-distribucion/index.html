@@ -38,7 +38,43 @@
         .jumbotron {
             text-align: center;
         }
+       #titulo {
+      animation: flipper 4s ease-in 2s infinite;
+      -moz-animation: flipper 4s ease-in 2s infinite;
+      -webkit-animation: flipper 4s ease-in 2s infinite;
+
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      display: inline-block;
+    }
+    @-webkit-keyframes flipper {
+     0% {
+       -webkit-transform: perspective(300px) rotateY(0deg);
+     }
+     15%, 100% {
+       -webkit-transform: perspective(300px) rotateY(360deg);
+     }
+   }
+   @-moz-keyframes flipper {
+     0% {
+       -moz-transform: perspective(300px) rotateY(0deg);
+     }
+     15%, 100% {
+       -moz-transform: perspective(300px) rotateY(360deg);
+     }
+   }
+   @keyframes flipper {
+     0% {
+       transform: perspective(300px) rotateY(0deg);
+     }
+     15%, 100% {
+       transform: perspective(300px) rotateY(360deg);
+     }
+   }
     </style>
+
+
 
 </head>
 
@@ -64,7 +100,7 @@
                     <!--Links-->
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="indexmd.html">Inicio <span class="sr-only"></span></a>
+                            <a class="nav-link" href="index.html"><span id="titulo">Inicio</span><span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="registro.html">Registro</a>
@@ -81,7 +117,7 @@
                     </ul>
                     <!--Search form-->
                     <form class="form-inline">
-                        <input class="form-control" type="text" placeholder="Buscar por código...">
+                        <input id="tokenfield-typeahead" class="form-control" type="text" placeholder="Buscar..."/>
                     </form>
         </div>
                 <!--/.Collapse content-->
@@ -94,11 +130,15 @@
     </header>
 
     <main>
+      <div class="alert alert-success alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+  <strong>¡Tienes 4 pedidos nuevos!</strong>
+</div>
+
 
         <!--Main layout-->
         <div class="container">
 
-            <hr class="extra-margins">
 
             <!--Second row-->
             <div class="row">
@@ -149,7 +189,7 @@
                         <!--Card content-->
                         <div class="card-block">
                             <!--Title-->
-                            <h4 class="card-title"><span class="mdl-badge" data-badge="4">Pedidos</span></h4>
+                            <h4 class="card-title"><span class="mdl-badge" href="pedidos.html" data-badge="4">Pedidos</span></h4>
                             <!--Text-->
                             <p class="card-text">¡Mira los nuevos pedidos!</p>
                             <a href="pedidos.html" class="btn btn-primary">Ir</a>
@@ -178,7 +218,7 @@
                         <!--Card content-->
                         <div class="card-block">
                             <!--Title-->
-                            <h4 class="card-title"><span class="mdl-badge" data-badge="+" href="guiasremision.html">Guías de remisión</span></h4>
+                            <h4 class="card-title"><span class="mdl-badge" data-badge="2" href="guiasremision.html">Guías de remisión</span></h4>
 </button></h4>
                             <!--Text-->
                             <p class="card-text">¡Mira las guías de remisión generadas!</p>
@@ -235,11 +275,26 @@
 
             <ul>
                 <li>
-              <li><a target="_blank" href="#" class="btn btn-default">SALIR</a></li>
+              <li><a target="_blank" href="../index.html" class="btn btn-default">SALIR</a></li>
             </ul>
         </div>
-        <!--/.Call to action-->
 
+<script type="text/javascript" src="js/jquery-2.2.3.js">
+var engine = new Bloodhound({
+  local: [{value: 'registro'}, {value: 'factura'}, {value: 'pedido'}],
+  datumTokenizer: function(d) {
+    return Bloodhound.tokenizers.whitespace(d.value);
+  },
+  queryTokenizer: Bloodhound.tokenizers.whitespace
+});
+
+engine.initialize();
+
+$('#tokenfield-typeahead').tokenfield({
+  typeahead: [null, { source: engine.ttAdapter() }]
+});
+</script>
+</body>
     </footer>
     <!--/.Footer-->
 
@@ -252,13 +307,15 @@
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/tether.min.js"></script>
 
+
     <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
 
-</body>
+
 
 </html>

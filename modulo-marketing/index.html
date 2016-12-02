@@ -6,11 +6,25 @@
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.form.min.js"></script>
     <script type="text/javascript" src="js/material.min.js"></script>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Material Design Lite  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> </head>
+
+    <script>
+        $(function(){
+            
+            $('#archivo-form').ajaxForm(function(){
+                
+                alert('Archivo cargado satisfactoriamente');
+                
+            });
+            
+        });
+    </script>
 
 <body>
     <!-- Uses a header that scrolls with the text, rather than staying
@@ -22,9 +36,13 @@
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
-                <nav class="mdl-navigation"> <a class="mdl-navigation__link dialog-button">Publicaciones Recientes</a> <a class="mdl-navigation__link" href="">Añadir Nuevo</a> </nav>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link dialog-button" id="public">Publicaciones Recientes</a> 
+                    <a class="mdl-navigation__link dialog-button" id="agregar">Añadir Nuevo</a> 
+                </nav>
             </div>
-        </header>
+        </header> 
+        
         <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
             <header class="demo-drawer-header"> <img src="img/alfredo.jpg" class="demo-avatar">
                 <div class="demo-avatar-dropdown"> <span>hello@example.com</span>
@@ -41,6 +59,138 @@
                 <!-- Material Icons: https://material.io/icons/ --><a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a> <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Buzón</a> <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Papelera</a>
                 <div class="mdl-layout-spacer"></div> <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Ayuda<span class="visuallyhidden">Help</span></a> </nav>
         </div>
+    
+        
+         <!-- plantilla de elementos -->
+        <!-- Contenido con 4 columnas debajo del Slider -->
+        
+<div class="android-card-container mdl-grid">
+<!-- Columna 1 -->
+<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img1.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img2.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img3.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img4.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/PROMO11.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img5.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img6.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+<div class="mdl-card__media">
+        <img src="img/img7.jpg">
+        
+      </div>
+<div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
+      </div>
+<div class="mdl-card__actions">
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+        <button class="mdl-button mdl-button--raised mdl-button--colored">Publicar</button>
+         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+        </a>
+      </div>
+    
+    
+        
+        
         <main class="mdl-layout__content">
             <div class="page-content">
                 <!-- Your content goes here -->
@@ -81,12 +231,45 @@
                 <button type="button" class="mdl-button" disabled>Disabled action</button>
             </div>
         </dialog>
+        
+        <dialog id="dialog1" class="mdl-dialog">
+            <h3 class="mdl-dialog__title">Agregar Nuevo Archivo</h3>
+            <div class="mdl-dialog__content">
+              <div align="center"> 
+                <form id="archivo-form" action="añadir.php" method=post enctype="multipart/form-data">
+                    Ingrese aqui su archivo:<br>
+                    <input type="file" name="archivo">
+                    <input type="submit" value="Añadir" id="anadir">
+                </form>
+                
+                </div>
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button">Cerrar</button>
+            </div>
+        </dialog>
     </div>
+ 
     <script>
         (function () {
             'use strict';
-            var dialogButton = document.querySelector('.dialog-button');
+            var dialogButton = document.querySelector('#public');
             var dialog = document.querySelector('#dialog');
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            dialogButton.addEventListener('click', function () {
+                dialog.showModal();
+            });
+            dialog.querySelector('button:not([disabled])').addEventListener('click', function () {
+                dialog.close();
+            });
+        }());
+        
+        (function () {
+            'use strict';
+            var dialogButton = document.querySelector('#agregar');
+            var dialog = document.querySelector('#dialog1');
             if (!dialog.showModal) {
                 dialogPolyfill.registerDialog(dialog);
             }
