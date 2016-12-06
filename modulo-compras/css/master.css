@@ -1,0 +1,13 @@
+.portfolio-box{
+  height: 400px;
+}
+
+img{
+  height: 400px !important;
+}
+section{
+  margin-top: 50px;
+}
+nav{
+background-color: rgba(255, 89, 45, 0.83) !important ;
+}

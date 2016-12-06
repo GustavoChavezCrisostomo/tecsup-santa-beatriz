@@ -48,7 +48,7 @@ $lista = listarReportes();
 								</tr>
 							</thead>
 							<tbody>
-								<?php 
+								<?php
                             foreach($lista as $reporte){
                         ?>
                         <tr>
@@ -57,7 +57,7 @@ $lista = listarReportes();
                             <td><?php echo $reporte->codInspector?></td>
                             <td><?php echo $reporte->cantidad?></td>
                             <td><?php echo $reporte->idproducto?></td>
-							<td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="modificar.php?id=<?php echo $reporte->id?>">Editar</a></td>
+														<td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="modificar.php?id=<?php echo $reporte->id?>">Editar</a></td>
                             <td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" href="borrar.php?id=<?php echo $reporte->id?>">Eliminar</a></td>
                         </tr>
                         <?php
