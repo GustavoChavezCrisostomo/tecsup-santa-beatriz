@@ -1,3 +1,6 @@
+<?php
+    require 'functions/publicar.php';
+?>
 <html>
 
 <head>
@@ -65,126 +68,33 @@
         <!-- Contenido con 4 columnas debajo del Slider -->
         
 <div class="android-card-container mdl-grid">
-<!-- Columna 1 -->
-<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img1.jpg" class="responsive-img">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
     
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img2.jpg" class="responsive-img">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img3.jpg" class="responsive-img">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
+    <?php 
+        $publicidades = publicidad(); // invocamos el método creado en publicar.php
     
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img4.jpg">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-        
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/PROMO11.jpg">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-        
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img5.jpg">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-       
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img6.jpg">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-        
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
-    </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-<div class="mdl-card__media">
-        <img src="img/img7.jpg">
-        
-      </div>
-<div class="mdl-card__supporting-text">
-        <span class="mdl-typography--font-light mdl-typography--subhead">publicidad Especifica</span>
-      </div>
-<div class="mdl-card__actions">
-        <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-        
-         <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
-        </a>
-      </div>
+        foreach($publicidades as $publicidad){ 
+    ?>
     
+    <!-- Columna 1 -->
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+    <div class="mdl-card__media">
+            <img src="img/<?=$publicidad->imagen?>" class="responsive-img">
+            
+          </div>
+    <div class="mdl-card__supporting-text">
+            <span class="mdl-typography--font-light mdl-typography--subhead"><?=$publicidad->nombre?></span>
+          </div>
+    <div class="mdl-card__actions">
+            <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
+             <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+            </a>
+          </div>
+        </div>
+    
+    <?php
+        }
+        
+    ?>
     
         
         
