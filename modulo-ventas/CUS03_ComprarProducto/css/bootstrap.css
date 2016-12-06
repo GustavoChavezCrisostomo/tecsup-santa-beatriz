@@ -2527,6 +2527,7 @@ input[type="file"] {
 }
 input[type="range"] {
   display: block;
+margin: auto;    
   width: 100%;
 }
 select[multiple],
@@ -2630,6 +2631,7 @@ input[type="search"] {
 }
 .form-group {
   margin-bottom: 15px;
+    text-align: 50px;
 }
 .radio,
 .checkbox {
@@ -6755,3 +6757,11 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+div {
+    
+}
+
+.form-group {
+    
+}

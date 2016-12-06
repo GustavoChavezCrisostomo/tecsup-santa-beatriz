@@ -33,31 +33,31 @@ $lista = listarReportes();
 			<div class="mdl-grid portfolio-max-width">
 				<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
 					<div class="mdl-card__title">
-						<h2 class="mdl-card__title-text">Página de gestión de Reportes</h2> </div>
+						<h2 class="mdl-card__title-text">Página de gestión de Movimientos Diarios</h2> </div>
 					<center>
 						<table class="mdl-data-table mdl-js-data-table">
 							<thead>
 								<tr>
 									<th class="mdl-data-table__cell--non-numeric">ID</th>
-									<th class="mdl-data-table__cell--non-numeric">Fecha</th>
-									<th class="mdl-data-table__cell--non-numeric">ID Inspector</th>
 									<th class="mdl-data-table__cell--non-numeric">Cantidad</th>
-									<th class="mdl-data-table__cell--non-numeric">ID Producto</th>
+									<th class="mdl-data-table__cell--non-numeric">ID Inspector</th>
+									<th class="mdl-data-table__cell--non-numeric">Estado</th>
+									<th class="mdl-data-table__cell--non-numeric">Producto</th>
 									<th class="mdl-data-table__cell--non-numeric">Editar</th>
 									<th class="mdl-data-table__cell--non-numeric">Eliminar</th>
 								</tr>
 							</thead>
 							<tbody>
-								<?php
+								<?php 
                             foreach($lista as $reporte){
                         ?>
                         <tr>
                             <td><?php echo $reporte->id?></td>
-                            <td><?php echo $reporte->fecha?></td>
-                            <td><?php echo $reporte->codInspector?></td>
                             <td><?php echo $reporte->cantidad?></td>
+                            <td><?php echo $reporte->codInspector?></td>
+                            <td><?php echo $reporte->estado?></td>
                             <td><?php echo $reporte->idproducto?></td>
-														<td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="modificar.php?id=<?php echo $reporte->id?>">Editar</a></td>
+							<td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="modificar.php?id=<?php echo $reporte->id?>">Editar</a></td>
                             <td><a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" href="borrar.php?id=<?php echo $reporte->id?>">Eliminar</a></td>
                         </tr>
                         <?php
