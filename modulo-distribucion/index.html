@@ -20,6 +20,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
+    
 
     <!-- Template styles -->
     <style rel="stylesheet">
@@ -73,7 +74,7 @@
      }
    }
     </style>
-
+<link href="css/style1.css" rel="stylesheet"/>
 
 
 </head>
@@ -103,10 +104,10 @@
                             <a class="nav-link" href="index.html"><span id="titulo">Inicio</span><span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="registro.html">Registro</a>
+                            <a class="nav-link" href="registro.php">Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pedidos.html">Pedidos</a>
+                            <a class="nav-link" href="pedidos.php">Pedidos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="guiasremision.html">Guías de Remisión</a>
@@ -163,7 +164,7 @@
                           <h4 class="card-title">Registro</h4>
                           <!--Text-->
                           <p class="card-text">¡Mira lo que hay en tu almacén!</p>
-                          <a href="registro.html" class="btn btn-primary">Ir</a>
+                          <a href="registro.php" class="btn btn-primary">Ir</a>
                       </div>
                       <!--/.Card content-->
 
@@ -192,7 +193,7 @@
                             <h4 class="card-title"><span class="mdl-badge" href="pedidos.html" data-badge="4">Pedidos</span></h4>
                             <!--Text-->
                             <p class="card-text">¡Mira los nuevos pedidos!</p>
-                            <a href="pedidos.html" class="btn btn-primary">Ir</a>
+                            <a href="pedidos.php" class="btn btn-primary">Ir</a>
                         </div>
                         <!--/.Card content-->
 
@@ -280,19 +281,7 @@
         </div>
 
 <script type="text/javascript" src="js/jquery-2.2.3.js">
-var engine = new Bloodhound({
-  local: [{value: 'registro'}, {value: 'factura'}, {value: 'pedido'}],
-  datumTokenizer: function(d) {
-    return Bloodhound.tokenizers.whitespace(d.value);
-  },
-  queryTokenizer: Bloodhound.tokenizers.whitespace
-});
 
-engine.initialize();
-
-$('#tokenfield-typeahead').tokenfield({
-  typeahead: [null, { source: engine.ttAdapter() }]
-});
 </script>
 </body>
     </footer>
