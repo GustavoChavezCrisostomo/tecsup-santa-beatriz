@@ -85,8 +85,9 @@
             <span class="mdl-typography--font-light mdl-typography--subhead"><?=$publicidad->nombre?></span>
           </div>
     <div class="mdl-card__actions">
-            <button class="mdl-button mdl-button--raised mdl-button--colored">Modificar</button>
-             <button class="mdl-button mdl-button--raised mdl-button--colored">Deshabilitar</button>
+            <button class="mdl-button mdl-js-button mdl-button--primary">Editar</button>
+            <button class="mdl-button mdl-js-button mdl-button--primary">Publicar</button>
+            <button class="mdl-button mdl-js-button mdl-button--primary">Eliminar</button>
             </a>
           </div>
         </div>
